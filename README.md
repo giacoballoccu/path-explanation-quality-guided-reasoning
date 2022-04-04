@@ -3,6 +3,7 @@ This is the code for the paper "Reinforcement Recommendation Reasoning through K
 
 ![Visual Abstract](/KG-EAI-vabstract.png)
 
+The other baselines are located in the other repository: [Knowlede-Aware-Recommender-Systems-Baselines](https://github.com/giacoballoccu/Knowlede-Aware-Recommender-Systems-Baselines)
 ## Datasets
 Three public avaiable datasets from different domains, ML1M for movies, LASTFM for songs and Amazon Beauty for eCommerce.
 
