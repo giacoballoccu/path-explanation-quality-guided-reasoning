@@ -51,4 +51,5 @@ python test_agent.py --dataset <dataset_name> --metric <metric_to_consider_in_tr
 # References
 \[1\] Post Processing Recommender Systems with Knowledge Graphs
 for Recency, Popularity, and Diversity of Explanations
+
 \[2\] Yikun Xian, Zuohui Fu, S. Muthukrishnan, Gerard de Melo, and Yongfeng Zhang. 2019. Reinforcement knowledge graph reasoning for explainable recommendation. In Proceedings of the 42nd International ACM SIGIR (Paris, France) https://github.com/orcax/PGPR 
