@@ -1,7 +1,7 @@
 # Explanation Quality Guided Path Reasoning (EQGPR)
 This is the code for the paper "Reinforcement Recommendation Reasoning through Knowledge Graphs for Explanation Quality" currently proceeding in the Elseiver Special Issue "Knowledge-Graph-Enabled Artificial Intelligence (KG-enabled AI)".
 
-[Visual Abstract](/KG-EAI-vabstract.png)
+![Visual Abstract](/KG-EAI-vabstract.png)
 
 ## Datasets
 Three public avaiable datasets from different domains, ML1M for movies, LASTFM for songs and Amazon Beauty for eCommerce.
