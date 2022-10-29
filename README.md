@@ -49,6 +49,13 @@ python test_agent.py --dataset <dataset_name> --metric <metric_to_consider_in_tr
 
 5. Predicted paths will be avaiable in the paths folder, they can be evaluated through the main.py with the ```eval_baseline=True``` or performe the Post-Processing previously proposed. (Refer to the readme [here](https://github.com/giacoballoccu/PPE-Path-Reasoning-RecSys/blob/main/README.md))
 
+## Computational Complexity
+Under our post-processing approach, once the platform decides to include reasoning path quality in the recommendation policy, the LIR (SEP) values for each user (product), for all interactions, should be computed. 
+Computing all LIR values has $\mathcal{O}(|U| * |T_u|)$ complexity based on the number of users $|\mathcal U|$ and of interactions per user $| T_u |$, with in general $| T_u | << |\mathcal U|$. Computing the LIR value for a new user interaction has $O(1)$ complexity. 
+Conversely, computing all SEP values has a complexity in terms of number of entity types $|\lambda|$ and number of entities per entity type $| E_{\lambda} |$, that is $\mathcal{O}(|\lambda| * | E_{\lambda} |)$, in general $| \lambda | < < | E_{\lambda} |$. The insertion of a new product, interaction, or entity type would require to (re)compute the SEP values for the entities with the type that product belongs to. We however assume that SEP values will be updated periodically (and not after every insertion), given that the popularity patterns would not change in the short period. Furthermore, the computation for both LIR and SEP can be easily parallelized. 
+
+Optimization on PTD does not require any pre-computation. Therefore, given the above pre-computed matrices, our post-processing optimization for a user on LIR, SEP or PTD has complexity $\mathcal{O}(m\log{}m)$, with $m = | \mathcal{L}_{u}|$ being the number of predicted paths for user $u$ by the original model.  
+
 # References
 \[1\] Post Processing Recommender Systems with Knowledge Graphs
 for Recency, Popularity, and Diversity of Explanations
